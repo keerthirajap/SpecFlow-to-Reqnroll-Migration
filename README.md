@@ -1,7 +1,3 @@
-Here's a GitHub README file based on the content you provided:
-
----
-
 # SpecFlow to Reqnroll Migration Guide
 
 If you’ve been using SpecFlow for your test automation, you might have heard that it no longer supports .NET 8 or 9 or above.
