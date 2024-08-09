@@ -16,11 +16,20 @@ namespace BDDTesting.Net7.StepDefinitions
         private readonly ScenarioContext _scenarioContext;
         private readonly FeatureContext _featureContext;
 
+        private List<string> _tags;
+
         public SeleniumUISteps(ScenarioContext scenarioContext, FeatureContext featureContext)
         {
             _scenarioContext = scenarioContext;
             _featureContext = featureContext;
-            _driver = new ChromeDriver();
+
+            _tags = _scenarioContext.ScenarioInfo.Tags.ToList();
+
+            // Check if the scenario is tagged with 'UI'
+            if (_tags.Contains("UI"))
+            {
+                _driver = new ChromeDriver();
+            }
         }
 
         [Given(@"I navigate to the C-Sharp Corner article page ""([^""]*)""")]
@@ -47,10 +56,8 @@ namespace BDDTesting.Net7.StepDefinitions
         [AfterScenario]
         public void AfterScenario()
         {
-            var tags = _scenarioContext.ScenarioInfo.Tags;
-
             // Check if the scenario is tagged with 'UI'
-            if (tags.Contains("UI") && !string.IsNullOrEmpty(_driver.Url))
+            if (_tags.Contains("UI"))
             {
                 _driver.Quit();
             }
