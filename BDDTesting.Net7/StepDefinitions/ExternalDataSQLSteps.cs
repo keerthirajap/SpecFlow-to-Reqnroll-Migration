@@ -3,7 +3,7 @@ using BDDTesting.Net7.Repositories;
 using System;
 using System.Data.Common;
 using System.Data.SqlClient;
-using TechTalk.SpecFlow;
+using Reqnroll;
 using Insight.Database;
 
 namespace BDDTesting.Net7.StepDefinitions

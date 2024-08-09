@@ -4,7 +4,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using RestSharp;
 using System;
-using TechTalk.SpecFlow;
+using Reqnroll;
 
 namespace BDDTesting.Net7.StepDefinitions
 {

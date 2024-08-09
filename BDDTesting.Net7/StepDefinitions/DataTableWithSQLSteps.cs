@@ -4,8 +4,7 @@ using Insight.Database;
 using System;
 using System.Data.Common;
 using System.Data.SqlClient;
-using TechTalk.SpecFlow;
-using TechTalk.SpecFlow.Assist;
+using Reqnroll;
 
 namespace BDDTesting.Net7.StepDefinitions
 {
@@ -46,7 +45,7 @@ namespace BDDTesting.Net7.StepDefinitions
         {
             _usersExpected = new List<User>();
 
-            foreach (TableRow row in table.Rows)
+            foreach (DataTableRow row in table.Rows)
             {
                 User user = new User();
 

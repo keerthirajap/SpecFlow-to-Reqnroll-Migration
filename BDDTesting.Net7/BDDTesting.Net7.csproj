@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
@@ -14,22 +14,36 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<!-- SpecFlow Packages -->
+		<!-- Reqnroll Packages -->
+		<PackageReference Include="Reqnroll" Version="2.0.3" />
+		<PackageReference Include="Reqnroll.MsTest" Version="2.0.3" />
+		<PackageReference Include="Reqnroll.ExternalData" Version="2.0.3" />
+
+
+		
+
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.1" />
+		<PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
+		<PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
+		
+		
 		<PackageReference Include="Insight.Database" Version="6.3.11" />
-		<PackageReference Include="RestSharp" Version="111.4.1" />
-		<PackageReference Include="SpecFlow" Version="3.9.74" />
-		<PackageReference Include="SpecFlow.MsTest" Version="3.9.74" />
-		<PackageReference Include="SpecFlow.ExternalData" Version="3.9.74" />
+		
+		
+		
+		<PackageReference Include="RestSharp" Version="111.4.1" />		
 
 		<!-- Selenium WebDriver Package -->
 		<PackageReference Include="Selenium.WebDriver" Version="4.20.0" />
 
 		<PackageReference Include="coverlet.collector" Version="3.2.0" />
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.1" />
-		<PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
-		<PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
 
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
