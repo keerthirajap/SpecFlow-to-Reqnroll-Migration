@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
@@ -11,6 +11,7 @@
 
 	<ItemGroup>
 		<!-- SpecFlow Packages -->
+		<PackageReference Include="RestSharp" Version="111.4.1" />
 		<PackageReference Include="SpecFlow" Version="3.9.0" />
 		<PackageReference Include="SpecFlow.MsTest" Version="3.9.0" />
 

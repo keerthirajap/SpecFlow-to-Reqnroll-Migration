@@ -14,7 +14,6 @@
     [Binding]
     public class Hooks
     {
-        private readonly IWebDriver _driver;
         private readonly ILoggerService _logger;
         private readonly IServiceScope _serviceScope;
         private readonly ScenarioContext _scenarioContext;
@@ -25,7 +24,6 @@
             // Initialize the service provider and create a service scope
             TestServiceProvider.ConfigureServices();
             _serviceScope = TestServiceProvider.ServiceProvider.CreateScope();
-            _driver = new ChromeDriver();
             _logger = _serviceScope.ServiceProvider.GetRequiredService<ILoggerService>();
 
             // Inject ScenarioContext and FeatureContext
@@ -49,22 +47,6 @@
         [AfterScenario]
         public void AfterScenario()
         {
-            // Capture and print console logs
-            var logs = _driver.Manage().Logs.GetLog(LogType.Browser);
-            if (logs.Any())
-            {
-                _logger.Log("Console Logs:");
-                foreach (var log in logs)
-                {
-                    _logger.Log(log.Message);
-                }
-            }
-            else
-            {
-                _logger.Log("No console logs found.");
-            }
-
-            _driver.Quit();
             _serviceScope.Dispose(); // Dispose the service scope
         }
 
