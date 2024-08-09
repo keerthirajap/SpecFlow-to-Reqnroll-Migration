@@ -27,7 +27,7 @@ namespace BDDTesting.Net7.Features
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-        private string[] _featureTags = ((string[])(null));
+        private static string[] featureTags = ((string[])(null));
         
 #line 1 "RestSharpAPI.feature"
 #line hidden
@@ -48,7 +48,7 @@ namespace BDDTesting.Net7.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "IP Address Type Check", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "IP Address Type Check", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -60,7 +60,7 @@ namespace BDDTesting.Net7.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute()]
-        public virtual void TestInitialize()
+        public void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "IP Address Type Check")))
@@ -70,48 +70,38 @@ namespace BDDTesting.Net7.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute()]
-        public virtual void TestTearDown()
+        public void TestTearDown()
         {
             testRunner.OnScenarioEnd();
         }
         
-        public virtual void ScenarioInitialize(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
+        public void ScenarioInitialize(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioInitialize(scenarioInfo);
             testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<Microsoft.VisualStudio.TestTools.UnitTesting.TestContext>(_testContext);
         }
         
-        public virtual void ScenarioStart()
+        public void ScenarioStart()
         {
             testRunner.OnScenarioStart();
         }
         
-        public virtual void ScenarioCleanup()
+        public void ScenarioCleanup()
         {
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void VerifyIPAddressType(string ip_Address, string expected_Type, string[] exampleTags)
+        public virtual void VerifyIPAddressType_Examples(string ip_Address, string expected_Type, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("ip_address", ip_Address);
             argumentsOfScenario.Add("expected_type", expected_Type);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify IP address type", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify IP address type -> Examples", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
                 testRunner.SkipScenario();
             }
@@ -129,67 +119,67 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type: 24.48.0.1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type -> Examples: 24.48.0.1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "IP Address Type Check")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "24.48.0.1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ip_address", "24.48.0.1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected_type", "IPv4")]
-        public virtual void VerifyIPAddressType_24_48_0_1()
+        public void VerifyIPAddressType_Examples_24_48_0_1()
         {
 #line 3
-this.VerifyIPAddressType("24.48.0.1", "IPv4", ((string[])(null)));
+this.VerifyIPAddressType_Examples("24.48.0.1", "IPv4", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type: 2401:4900:1c29:6e64:f56f:78c1:95d5:a48d")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type -> Examples: 2401:4900:1c29:6e64:f56f:78c1:95d5:a48d")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "IP Address Type Check")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "2401:4900:1c29:6e64:f56f:78c1:95d5:a48d")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ip_address", "2401:4900:1c29:6e64:f56f:78c1:95d5:a48d")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected_type", "IPv6")]
-        public virtual void VerifyIPAddressType_240149001C296E64F56F78C195D5A48D()
+        public void VerifyIPAddressType_Examples_240149001C296E64F56F78C195D5A48D()
         {
 #line 3
-this.VerifyIPAddressType("2401:4900:1c29:6e64:f56f:78c1:95d5:a48d", "IPv6", ((string[])(null)));
+this.VerifyIPAddressType_Examples("2401:4900:1c29:6e64:f56f:78c1:95d5:a48d", "IPv6", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type: 8.8.8.8")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type -> Examples: 8.8.8.8")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "IP Address Type Check")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "8.8.8.8")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ip_address", "8.8.8.8")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected_type", "IPv4")]
-        public virtual void VerifyIPAddressType_8_8_8_8()
+        public void VerifyIPAddressType_Examples_8_8_8_8()
         {
 #line 3
-this.VerifyIPAddressType("8.8.8.8", "IPv4", ((string[])(null)));
+this.VerifyIPAddressType_Examples("8.8.8.8", "IPv4", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type: 2001:4860:4860::8888")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type -> Examples: 2001:4860:4860::8888")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "IP Address Type Check")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "2001:4860:4860::8888")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ip_address", "2001:4860:4860::8888")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected_type", "IPv6")]
-        public virtual void VerifyIPAddressType_2001486048608888()
+        public void VerifyIPAddressType_Examples_2001486048608888()
         {
 #line 3
-this.VerifyIPAddressType("2001:4860:4860::8888", "IPv6", ((string[])(null)));
+this.VerifyIPAddressType_Examples("2001:4860:4860::8888", "IPv6", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type: 172.217.14.206")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type -> Examples: 172.217.14.206")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "IP Address Type Check")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "172.217.14.206")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ip_address", "172.217.14.206")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected_type", "IPv4")]
-        public virtual void VerifyIPAddressType_172_217_14_206()
+        public void VerifyIPAddressType_Examples_172_217_14_206()
         {
 #line 3
-this.VerifyIPAddressType("172.217.14.206", "IPv4", ((string[])(null)));
+this.VerifyIPAddressType_Examples("172.217.14.206", "IPv4", ((string[])(null)));
 #line hidden
         }
     }

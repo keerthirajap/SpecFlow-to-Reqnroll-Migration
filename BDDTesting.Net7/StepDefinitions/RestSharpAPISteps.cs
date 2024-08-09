@@ -7,18 +7,17 @@ using TechTalk.SpecFlow;
 namespace BDDTesting.Net7.StepDefinitions
 {
     [Binding]
-    public class CheckCSharpCornerArticleSteps
+    public class RestSharpAPISteps
     {
         private readonly IWebDriver _driver;
 
         private readonly ScenarioContext _scenarioContext;
         private readonly FeatureContext _featureContext;
 
-        public CheckCSharpCornerArticleSteps(ScenarioContext scenarioContext, FeatureContext featureContext)
+        public RestSharpAPISteps(ScenarioContext scenarioContext, FeatureContext featureContext)
         {
             _scenarioContext = scenarioContext;
             _featureContext = featureContext;
-            _driver = new ChromeDriver();
         }
 
         [Given(@"I navigate to the C-Sharp Corner article page ""([^""]*)""")]
@@ -45,7 +44,7 @@ namespace BDDTesting.Net7.StepDefinitions
         [AfterScenario]
         public void AfterScenario()
         {
-            _driver.Quit();
+            //_driver.Quit();
         }
     }
 }

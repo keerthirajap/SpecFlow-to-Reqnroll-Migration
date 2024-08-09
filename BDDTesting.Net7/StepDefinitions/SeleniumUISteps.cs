@@ -1,4 +1,3 @@
-using Google.Protobuf.WellKnownTypes;
 using Newtonsoft.Json.Linq;
 using RestSharp;
 using System;
@@ -7,12 +6,12 @@ using TechTalk.SpecFlow;
 namespace BDDTesting.Net7.StepDefinitions
 {
     [Binding]
-    public class IPAddressTypeCheckStepDefinitions
+    public class SeleniumUISteps
     {
         private readonly ScenarioContext _scenarioContext;
         private RestResponse _response;
 
-        public IPAddressTypeCheckStepDefinitions(ScenarioContext scenarioContext)
+        public SeleniumUISteps(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
         }
