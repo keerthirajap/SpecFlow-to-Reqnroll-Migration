@@ -6,7 +6,7 @@ using System;
 using Reqnroll;
 using OpenQA.Selenium.Chrome;
 
-namespace BDDTesting.Net7.StepDefinitions
+namespace BDDTesting.Net8.StepDefinitions
 {
     [Binding]
     public class SeleniumUISteps

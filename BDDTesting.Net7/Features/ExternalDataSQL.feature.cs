@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace BDDTesting.Net7.Features
+namespace BDDTesting.Net8.Features
 {
     using Reqnroll;
     using System;
@@ -65,7 +65,7 @@ namespace BDDTesting.Net7.Features
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "ExternalData -> Validate ETL Process Loads User Data Correctly")))
             {
-                await global::BDDTesting.Net7.Features.ExternalData_ValidateETLProcessLoadsUserDataCorrectlyFeature.FeatureSetupAsync(null);
+                await global::BDDTesting.Net8.Features.ExternalData_ValidateETLProcessLoadsUserDataCorrectlyFeature.FeatureSetupAsync(null);
             }
         }
         

@@ -1,6 +1,6 @@
-﻿namespace BDDTesting.Net7
+﻿namespace BDDTesting.Net8
 {
-    using BDDTesting.Net7.Services;
+    using BDDTesting.Net8.Services;
     using Microsoft.Extensions.DependencyInjection;
     using System;
     using System.Collections.Generic;

@@ -1,12 +1,12 @@
-using BDDTesting.Net7.Models;
-using BDDTesting.Net7.Repositories;
+using BDDTesting.Net8.Models;
+using BDDTesting.Net8.Repositories;
 using Insight.Database;
 using System;
 using System.Data.Common;
 using System.Data.SqlClient;
 using Reqnroll;
 
-namespace BDDTesting.Net7.StepDefinitions
+namespace BDDTesting.Net8.StepDefinitions
 {
     [Binding]
     public class DataTableWithSQLSteps

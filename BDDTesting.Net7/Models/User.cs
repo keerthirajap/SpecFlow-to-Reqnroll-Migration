@@ -1,4 +1,4 @@
-﻿namespace BDDTesting.Net7.Models
+﻿namespace BDDTesting.Net8.Models
 {
     using System;
 

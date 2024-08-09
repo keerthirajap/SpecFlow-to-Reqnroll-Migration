@@ -1,6 +1,6 @@
-﻿namespace BDDTesting.Net7.Hooks
+﻿namespace BDDTesting.Net8.Hooks
 {
-    using BDDTesting.Net7.Services;
+    using BDDTesting.Net8.Services;
     using Microsoft.Extensions.DependencyInjection;
     using OpenQA.Selenium.Chrome;
     using OpenQA.Selenium;

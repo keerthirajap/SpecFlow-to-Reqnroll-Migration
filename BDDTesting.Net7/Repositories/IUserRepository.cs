@@ -1,6 +1,6 @@
-﻿namespace BDDTesting.Net7.Repositories
+﻿namespace BDDTesting.Net8.Repositories
 {
-    using BDDTesting.Net7.Models;
+    using BDDTesting.Net8.Models;
     using Insight.Database;
     using System;
     using System.Collections.Generic;

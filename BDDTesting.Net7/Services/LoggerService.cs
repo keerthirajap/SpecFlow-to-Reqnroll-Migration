@@ -1,4 +1,4 @@
-﻿namespace BDDTesting.Net7.Services
+﻿namespace BDDTesting.Net8.Services
 {
     using System;
     using System.Collections.Generic;

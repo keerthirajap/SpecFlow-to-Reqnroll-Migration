@@ -6,7 +6,7 @@ using RestSharp;
 using System;
 using Reqnroll;
 
-namespace BDDTesting.Net7.StepDefinitions
+namespace BDDTesting.Net8.StepDefinitions
 {
     [Binding]
     public class RestSharpAPISteps

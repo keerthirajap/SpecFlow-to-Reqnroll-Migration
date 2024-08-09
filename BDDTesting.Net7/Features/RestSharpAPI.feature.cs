@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace BDDTesting.Net7.Features
+namespace BDDTesting.Net8.Features
 {
     using Reqnroll;
     using System;
@@ -65,7 +65,7 @@ namespace BDDTesting.Net7.Features
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "Examples -> IP Address Type Check")))
             {
-                await global::BDDTesting.Net7.Features.Examples_IPAddressTypeCheckFeature.FeatureSetupAsync(null);
+                await global::BDDTesting.Net8.Features.Examples_IPAddressTypeCheckFeature.FeatureSetupAsync(null);
             }
         }
         
