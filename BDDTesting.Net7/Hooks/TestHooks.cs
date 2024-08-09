@@ -22,7 +22,7 @@
         public Hooks(ScenarioContext scenarioContext, FeatureContext featureContext)
         {
             //// Initialize the service provider and create a service scope
-            //TestServiceProvider.ConfigureServices();
+            TestServiceProvider.ConfigureServices();
             _serviceScope = TestServiceProvider.ServiceProvider.CreateScope();
             _logger = _serviceScope.ServiceProvider.GetRequiredService<ILoggerService>();
 
