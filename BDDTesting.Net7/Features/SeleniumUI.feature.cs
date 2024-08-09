@@ -20,7 +20,7 @@ namespace BDDTesting.Net7.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class VerifyPageElementsAndClickButtonFeature
+    public partial class Basic_VerifyPageElementsAndClickButtonFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -48,7 +48,7 @@ namespace BDDTesting.Net7.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Verify Page Elements and Click Button", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Basic -> Verify Page Elements and Click Button", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -63,9 +63,9 @@ namespace BDDTesting.Net7.Features
         public void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Verify Page Elements and Click Button")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Basic -> Verify Page Elements and Click Button")))
             {
-                global::BDDTesting.Net7.Features.VerifyPageElementsAndClickButtonFeature.FeatureSetup(null);
+                global::BDDTesting.Net7.Features.Basic_VerifyPageElementsAndClickButtonFeature.FeatureSetup(null);
             }
         }
         
@@ -92,15 +92,15 @@ namespace BDDTesting.Net7.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("UI TEsting -> Check C-Sharp Corner Article")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Verify Page Elements and Click Button")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("UI Testing -> Check C-Sharp Corner Article")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Basic -> Verify Page Elements and Click Button")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("UI")]
-        public void UITEsting_CheckC_SharpCornerArticle()
+        public void UITesting_CheckC_SharpCornerArticle()
         {
             string[] tagsOfScenario = new string[] {
                     "UI"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UI TEsting -> Check C-Sharp Corner Article", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UI Testing -> Check C-Sharp Corner Article", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden

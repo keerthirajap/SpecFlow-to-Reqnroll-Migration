@@ -1,7 +1,7 @@
-﻿Feature: IP Address Type Check
+﻿Feature: Examples -> IP Address Type Check
 
 @API
-Scenario Outline: Verify IP address type -> Examples
+Scenario Outline: Examples -> Verify IP address type with RestSharpAPI 
 	Given I send a request to check the IP address "<ip_address>"
 	Then the response should indicate that the IP address is of type "<expected_type>"
 

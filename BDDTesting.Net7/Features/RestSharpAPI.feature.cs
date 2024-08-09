@@ -20,7 +20,7 @@ namespace BDDTesting.Net7.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class IPAddressTypeCheckFeature
+    public partial class Examples_IPAddressTypeCheckFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -48,7 +48,7 @@ namespace BDDTesting.Net7.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "IP Address Type Check", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Examples -> IP Address Type Check", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -63,9 +63,9 @@ namespace BDDTesting.Net7.Features
         public void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "IP Address Type Check")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Examples -> IP Address Type Check")))
             {
-                global::BDDTesting.Net7.Features.IPAddressTypeCheckFeature.FeatureSetup(null);
+                global::BDDTesting.Net7.Features.Examples_IPAddressTypeCheckFeature.FeatureSetup(null);
             }
         }
         
@@ -91,7 +91,7 @@ namespace BDDTesting.Net7.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void VerifyIPAddressType_Examples(string ip_Address, string expected_Type, string[] exampleTags)
+        public virtual void Examples_VerifyIPAddressTypeWithRestSharpAPI(string ip_Address, string expected_Type, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "API"};
@@ -103,7 +103,7 @@ namespace BDDTesting.Net7.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("ip_address", ip_Address);
             argumentsOfScenario.Add("expected_type", expected_Type);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify IP address type -> Examples", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Examples -> Verify IP address type with RestSharpAPI", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -125,72 +125,73 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type -> Examples: 24.48.0.1")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "IP Address Type Check")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Examples -> Verify IP address type with RestSharpAPI: 24.48.0.1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Examples -> IP Address Type Check")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("API")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "24.48.0.1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ip_address", "24.48.0.1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected_type", "IPv4")]
-        public void VerifyIPAddressType_Examples_24_48_0_1()
+        public void Examples_VerifyIPAddressTypeWithRestSharpAPI_24_48_0_1()
         {
 #line 4
-this.VerifyIPAddressType_Examples("24.48.0.1", "IPv4", ((string[])(null)));
+this.Examples_VerifyIPAddressTypeWithRestSharpAPI("24.48.0.1", "IPv4", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type -> Examples: 2401:4900:1c29:6e64:f56f:78c1:95d5:a48d")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "IP Address Type Check")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Examples -> Verify IP address type with RestSharpAPI: 2401:4900:1c29:6e64:f56f:78" +
+            "c1:95d5:a48d")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Examples -> IP Address Type Check")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("API")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "2401:4900:1c29:6e64:f56f:78c1:95d5:a48d")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ip_address", "2401:4900:1c29:6e64:f56f:78c1:95d5:a48d")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected_type", "IPv6")]
-        public void VerifyIPAddressType_Examples_240149001C296E64F56F78C195D5A48D()
+        public void Examples_VerifyIPAddressTypeWithRestSharpAPI_240149001C296E64F56F78C195D5A48D()
         {
 #line 4
-this.VerifyIPAddressType_Examples("2401:4900:1c29:6e64:f56f:78c1:95d5:a48d", "IPv6", ((string[])(null)));
+this.Examples_VerifyIPAddressTypeWithRestSharpAPI("2401:4900:1c29:6e64:f56f:78c1:95d5:a48d", "IPv6", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type -> Examples: 8.8.8.8")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "IP Address Type Check")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Examples -> Verify IP address type with RestSharpAPI: 8.8.8.8")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Examples -> IP Address Type Check")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("API")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "8.8.8.8")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ip_address", "8.8.8.8")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected_type", "IPv4")]
-        public void VerifyIPAddressType_Examples_8_8_8_8()
+        public void Examples_VerifyIPAddressTypeWithRestSharpAPI_8_8_8_8()
         {
 #line 4
-this.VerifyIPAddressType_Examples("8.8.8.8", "IPv4", ((string[])(null)));
+this.Examples_VerifyIPAddressTypeWithRestSharpAPI("8.8.8.8", "IPv4", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type -> Examples: 2001:4860:4860::8888")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "IP Address Type Check")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Examples -> Verify IP address type with RestSharpAPI: 2001:4860:4860::8888")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Examples -> IP Address Type Check")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("API")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "2001:4860:4860::8888")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ip_address", "2001:4860:4860::8888")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected_type", "IPv6")]
-        public void VerifyIPAddressType_Examples_2001486048608888()
+        public void Examples_VerifyIPAddressTypeWithRestSharpAPI_2001486048608888()
         {
 #line 4
-this.VerifyIPAddressType_Examples("2001:4860:4860::8888", "IPv6", ((string[])(null)));
+this.Examples_VerifyIPAddressTypeWithRestSharpAPI("2001:4860:4860::8888", "IPv6", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify IP address type -> Examples: 172.217.14.206")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "IP Address Type Check")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Examples -> Verify IP address type with RestSharpAPI: 172.217.14.206")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Examples -> IP Address Type Check")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("API")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "172.217.14.206")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ip_address", "172.217.14.206")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:expected_type", "IPv4")]
-        public void VerifyIPAddressType_Examples_172_217_14_206()
+        public void Examples_VerifyIPAddressTypeWithRestSharpAPI_172_217_14_206()
         {
 #line 4
-this.VerifyIPAddressType_Examples("172.217.14.206", "IPv4", ((string[])(null)));
+this.Examples_VerifyIPAddressTypeWithRestSharpAPI("172.217.14.206", "IPv4", ((string[])(null)));
 #line hidden
         }
     }

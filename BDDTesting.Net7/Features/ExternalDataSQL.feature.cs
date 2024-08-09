@@ -20,7 +20,7 @@ namespace BDDTesting.Net7.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class ValidateETLProcessLoadsUserDataCorrectlyFeature
+    public partial class ExternalData_ValidateETLProcessLoadsUserDataCorrectlyFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -48,7 +48,7 @@ namespace BDDTesting.Net7.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Validate ETL Process Loads User Data Correctly", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "ExternalData -> Validate ETL Process Loads User Data Correctly", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -63,9 +63,9 @@ namespace BDDTesting.Net7.Features
         public void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Validate ETL Process Loads User Data Correctly")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "ExternalData -> Validate ETL Process Loads User Data Correctly")))
             {
-                global::BDDTesting.Net7.Features.ValidateETLProcessLoadsUserDataCorrectlyFeature.FeatureSetup(null);
+                global::BDDTesting.Net7.Features.ExternalData_ValidateETLProcessLoadsUserDataCorrectlyFeature.FeatureSetup(null);
             }
         }
         
@@ -97,7 +97,7 @@ namespace BDDTesting.Net7.Features
 #line hidden
         }
         
-        public virtual void ValidateUserDataAgainstExcelFile(
+        public virtual void ExternalData_ValidateUserDataAgainstExcelFile(
                     string userId, 
                     string firstName, 
                     string lastName, 
@@ -140,7 +140,7 @@ namespace BDDTesting.Net7.Features
             argumentsOfScenario.Add("UpdatedAt", updatedAt);
             argumentsOfScenario.Add("IsActive", isActive);
             argumentsOfScenario.Add("Role", role);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate user data against Excel file", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ExternalData -> Validate user data against Excel file", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -168,8 +168,8 @@ this.FeatureBackground();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate user data against Excel file: 1")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Validate ETL Process Loads User Data Correctly")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("ExternalData -> Validate user data against Excel file: 1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ExternalData -> Validate ETL Process Loads User Data Correctly")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DATA")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSource:ExternalDataSQL_UsersData.xlsx")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSet:Users")]
@@ -190,16 +190,16 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:UpdatedAt", "8/9/2024 12:00:00 AM")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:IsActive", "1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Role", "User")]
-        public void ValidateUserDataAgainstExcelFile_ExternalExamples_1()
+        public void ExternalData_ValidateUserDataAgainstExcelFile_ExternalExamples_1()
         {
 #line 7
-this.ValidateUserDataAgainstExcelFile("1", "John", "Doe", "john.doe@example.com", "555-0101", "3/25/1985 12:00:00 AM", "123 Elm St", "Springfield", "IL", "62701", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
+this.ExternalData_ValidateUserDataAgainstExcelFile("1", "John", "Doe", "john.doe@example.com", "555-0101", "3/25/1985 12:00:00 AM", "123 Elm St", "Springfield", "IL", "62701", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate user data against Excel file: 2")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Validate ETL Process Loads User Data Correctly")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("ExternalData -> Validate user data against Excel file: 2")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ExternalData -> Validate ETL Process Loads User Data Correctly")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DATA")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSource:ExternalDataSQL_UsersData.xlsx")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSet:Users")]
@@ -220,16 +220,16 @@ this.ValidateUserDataAgainstExcelFile("1", "John", "Doe", "john.doe@example.com"
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:UpdatedAt", "8/9/2024 12:00:00 AM")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:IsActive", "1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Role", "User")]
-        public void ValidateUserDataAgainstExcelFile_ExternalExamples_2()
+        public void ExternalData_ValidateUserDataAgainstExcelFile_ExternalExamples_2()
         {
 #line 7
-this.ValidateUserDataAgainstExcelFile("2", "Jane", "Smith", "jane.smith@example.com", "555-0102", "7/15/1990 12:00:00 AM", "456 Oak St", "Springfield", "IL", "62702", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
+this.ExternalData_ValidateUserDataAgainstExcelFile("2", "Jane", "Smith", "jane.smith@example.com", "555-0102", "7/15/1990 12:00:00 AM", "456 Oak St", "Springfield", "IL", "62702", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate user data against Excel file: 3")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Validate ETL Process Loads User Data Correctly")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("ExternalData -> Validate user data against Excel file: 3")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ExternalData -> Validate ETL Process Loads User Data Correctly")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DATA")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSource:ExternalDataSQL_UsersData.xlsx")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSet:Users")]
@@ -250,16 +250,16 @@ this.ValidateUserDataAgainstExcelFile("2", "Jane", "Smith", "jane.smith@example.
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:UpdatedAt", "8/9/2024 12:00:00 AM")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:IsActive", "1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Role", "User")]
-        public void ValidateUserDataAgainstExcelFile_ExternalExamples_3()
+        public void ExternalData_ValidateUserDataAgainstExcelFile_ExternalExamples_3()
         {
 #line 7
-this.ValidateUserDataAgainstExcelFile("3", "Michael", "Brown", "michael.brown@example.com", "555-0103", "11/5/1982 12:00:00 AM", "789 Pine St", "Springfield", "IL", "62703", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
+this.ExternalData_ValidateUserDataAgainstExcelFile("3", "Michael", "Brown", "michael.brown@example.com", "555-0103", "11/5/1982 12:00:00 AM", "789 Pine St", "Springfield", "IL", "62703", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate user data against Excel file: 4")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Validate ETL Process Loads User Data Correctly")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("ExternalData -> Validate user data against Excel file: 4")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ExternalData -> Validate ETL Process Loads User Data Correctly")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DATA")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSource:ExternalDataSQL_UsersData.xlsx")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSet:Users")]
@@ -280,16 +280,16 @@ this.ValidateUserDataAgainstExcelFile("3", "Michael", "Brown", "michael.brown@ex
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:UpdatedAt", "8/9/2024 12:00:00 AM")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:IsActive", "1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Role", "User")]
-        public void ValidateUserDataAgainstExcelFile_ExternalExamples_4()
+        public void ExternalData_ValidateUserDataAgainstExcelFile_ExternalExamples_4()
         {
 #line 7
-this.ValidateUserDataAgainstExcelFile("4", "Emily", "Johnson", "emily.johnson@example.com", "555-0104", "2/20/1995 12:00:00 AM", "321 Maple St", "Springfield", "IL", "62704", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
+this.ExternalData_ValidateUserDataAgainstExcelFile("4", "Emily", "Johnson", "emily.johnson@example.com", "555-0104", "2/20/1995 12:00:00 AM", "321 Maple St", "Springfield", "IL", "62704", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate user data against Excel file: 5")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Validate ETL Process Loads User Data Correctly")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("ExternalData -> Validate user data against Excel file: 5")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ExternalData -> Validate ETL Process Loads User Data Correctly")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DATA")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSource:ExternalDataSQL_UsersData.xlsx")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSet:Users")]
@@ -310,16 +310,16 @@ this.ValidateUserDataAgainstExcelFile("4", "Emily", "Johnson", "emily.johnson@ex
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:UpdatedAt", "8/9/2024 12:00:00 AM")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:IsActive", "1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Role", "User")]
-        public void ValidateUserDataAgainstExcelFile_ExternalExamples_5()
+        public void ExternalData_ValidateUserDataAgainstExcelFile_ExternalExamples_5()
         {
 #line 7
-this.ValidateUserDataAgainstExcelFile("5", "James", "Williams", "james.williams@example.com", "555-0105", "9/12/1988 12:00:00 AM", "654 Cedar St", "Springfield", "IL", "62705", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
+this.ExternalData_ValidateUserDataAgainstExcelFile("5", "James", "Williams", "james.williams@example.com", "555-0105", "9/12/1988 12:00:00 AM", "654 Cedar St", "Springfield", "IL", "62705", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate user data against Excel file: 6")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Validate ETL Process Loads User Data Correctly")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("ExternalData -> Validate user data against Excel file: 6")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ExternalData -> Validate ETL Process Loads User Data Correctly")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DATA")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSource:ExternalDataSQL_UsersData.xlsx")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSet:Users")]
@@ -340,16 +340,16 @@ this.ValidateUserDataAgainstExcelFile("5", "James", "Williams", "james.williams@
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:UpdatedAt", "8/9/2024 12:00:00 AM")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:IsActive", "1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Role", "User")]
-        public void ValidateUserDataAgainstExcelFile_ExternalExamples_6()
+        public void ExternalData_ValidateUserDataAgainstExcelFile_ExternalExamples_6()
         {
 #line 7
-this.ValidateUserDataAgainstExcelFile("6", "Olivia", "Davis", "olivia.davis@example.com", "555-0106", "6/18/1992 12:00:00 AM", "987 Birch St", "Springfield", "IL", "62706", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
+this.ExternalData_ValidateUserDataAgainstExcelFile("6", "Olivia", "Davis", "olivia.davis@example.com", "555-0106", "6/18/1992 12:00:00 AM", "987 Birch St", "Springfield", "IL", "62706", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate user data against Excel file: 7")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Validate ETL Process Loads User Data Correctly")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("ExternalData -> Validate user data against Excel file: 7")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ExternalData -> Validate ETL Process Loads User Data Correctly")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DATA")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSource:ExternalDataSQL_UsersData.xlsx")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSet:Users")]
@@ -370,16 +370,16 @@ this.ValidateUserDataAgainstExcelFile("6", "Olivia", "Davis", "olivia.davis@exam
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:UpdatedAt", "8/9/2024 12:00:00 AM")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:IsActive", "1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Role", "User")]
-        public void ValidateUserDataAgainstExcelFile_ExternalExamples_7()
+        public void ExternalData_ValidateUserDataAgainstExcelFile_ExternalExamples_7()
         {
 #line 7
-this.ValidateUserDataAgainstExcelFile("7", "Liam", "Miller", "liam.miller@example.com", "555-0107", "12/30/1989 12:00:00 AM", "159 Willow St", "Springfield", "IL", "62707", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
+this.ExternalData_ValidateUserDataAgainstExcelFile("7", "Liam", "Miller", "liam.miller@example.com", "555-0107", "12/30/1989 12:00:00 AM", "159 Willow St", "Springfield", "IL", "62707", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate user data against Excel file: 8")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Validate ETL Process Loads User Data Correctly")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("ExternalData -> Validate user data against Excel file: 8")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ExternalData -> Validate ETL Process Loads User Data Correctly")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DATA")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSource:ExternalDataSQL_UsersData.xlsx")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSet:Users")]
@@ -400,16 +400,16 @@ this.ValidateUserDataAgainstExcelFile("7", "Liam", "Miller", "liam.miller@exampl
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:UpdatedAt", "8/9/2024 12:00:00 AM")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:IsActive", "1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Role", "User")]
-        public void ValidateUserDataAgainstExcelFile_ExternalExamples_8()
+        public void ExternalData_ValidateUserDataAgainstExcelFile_ExternalExamples_8()
         {
 #line 7
-this.ValidateUserDataAgainstExcelFile("8", "Sophia", "Wilson", "sophia.wilson@example.com", "555-0108", "4/25/1994 12:00:00 AM", "753 Elm St", "Springfield", "IL", "62708", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
+this.ExternalData_ValidateUserDataAgainstExcelFile("8", "Sophia", "Wilson", "sophia.wilson@example.com", "555-0108", "4/25/1994 12:00:00 AM", "753 Elm St", "Springfield", "IL", "62708", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate user data against Excel file: 9")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Validate ETL Process Loads User Data Correctly")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("ExternalData -> Validate user data against Excel file: 9")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ExternalData -> Validate ETL Process Loads User Data Correctly")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DATA")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSource:ExternalDataSQL_UsersData.xlsx")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSet:Users")]
@@ -430,16 +430,16 @@ this.ValidateUserDataAgainstExcelFile("8", "Sophia", "Wilson", "sophia.wilson@ex
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:UpdatedAt", "8/9/2024 12:00:00 AM")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:IsActive", "1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Role", "User")]
-        public void ValidateUserDataAgainstExcelFile_ExternalExamples_9()
+        public void ExternalData_ValidateUserDataAgainstExcelFile_ExternalExamples_9()
         {
 #line 7
-this.ValidateUserDataAgainstExcelFile("9", "Benjamin", "Moore", "benjamin.moore@example.com", "555-0109", "10/14/1986 12:00:00 AM", "852 Oak St", "Springfield", "IL", "62709", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
+this.ExternalData_ValidateUserDataAgainstExcelFile("9", "Benjamin", "Moore", "benjamin.moore@example.com", "555-0109", "10/14/1986 12:00:00 AM", "852 Oak St", "Springfield", "IL", "62709", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate user data against Excel file: 10")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Validate ETL Process Loads User Data Correctly")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("ExternalData -> Validate user data against Excel file: 10")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ExternalData -> Validate ETL Process Loads User Data Correctly")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DATA")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSource:ExternalDataSQL_UsersData.xlsx")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("DataSet:Users")]
@@ -460,10 +460,10 @@ this.ValidateUserDataAgainstExcelFile("9", "Benjamin", "Moore", "benjamin.moore@
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:UpdatedAt", "8/9/2024 12:00:00 AM")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:IsActive", "1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Role", "User")]
-        public void ValidateUserDataAgainstExcelFile_ExternalExamples_10()
+        public void ExternalData_ValidateUserDataAgainstExcelFile_ExternalExamples_10()
         {
 #line 7
-this.ValidateUserDataAgainstExcelFile("10", "Ava", "Taylor", "ava.taylor@example.com", "555-0110", "8/9/1991 12:00:00 AM", "963 Pine St", "Springfield", "IL", "62710", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
+this.ExternalData_ValidateUserDataAgainstExcelFile("10", "Ava", "Taylor", "ava.taylor@example.com", "555-0110", "8/9/1991 12:00:00 AM", "963 Pine St", "Springfield", "IL", "62710", "USA", "8/9/2024 12:00:00 AM", "8/9/2024 12:00:00 AM", "1", "User", ((string[])(null)));
 #line hidden
         }
     }
