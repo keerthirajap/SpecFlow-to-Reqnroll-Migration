@@ -14,16 +14,16 @@
 
     public class ConsoleLoggerService : ILoggerService
     {
-        //public ConsoleLoggerService()
-        //{
-        //    // Ensure Trace listeners are configured
-        //    Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
-        //    Trace.AutoFlush = true;
-        //}
+        public ConsoleLoggerService()
+        {
+            // Ensure Trace listeners are configured
+            Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            Trace.AutoFlush = true;
+        }
 
         public void Log(string message)
         {
-            //Trace.WriteLine(message); // Write to Visual Studio Output window
+            Trace.WriteLine(message); // Write to Visual Studio Output window
         }
     }
 }
