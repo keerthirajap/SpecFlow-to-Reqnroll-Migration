@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BDDTesting.Net8", "BDDTesting.Net7\BDDTesting.Net8.csproj", "{A9BC9ACF-0FCE-4914-862B-28FDBDA35D1F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{81DA5CEE-D50E-4C9A-9CA6-06398498C8EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BDDTesting.Net8", "BDDTesting.Net8\BDDTesting.Net8.csproj", "{9A36A254-FE70-4F23-9A02-78B62FEA4115}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A9BC9ACF-0FCE-4914-862B-28FDBDA35D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9BC9ACF-0FCE-4914-862B-28FDBDA35D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9BC9ACF-0FCE-4914-862B-28FDBDA35D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9BC9ACF-0FCE-4914-862B-28FDBDA35D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A36A254-FE70-4F23-9A02-78B62FEA4115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A36A254-FE70-4F23-9A02-78B62FEA4115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A36A254-FE70-4F23-9A02-78B62FEA4115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A36A254-FE70-4F23-9A02-78B62FEA4115}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
