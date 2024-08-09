@@ -2,6 +2,7 @@
 
 Background:
 
+@DATA
 @DataSource:ExternalDataSQL_UsersData.xlsx @DataSet:Users
 Scenario: Validate user data against Excel file
 	Given the Excel file contains user data for user <UserId>

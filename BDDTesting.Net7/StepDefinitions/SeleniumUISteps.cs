@@ -1,39 +1,59 @@
 using Newtonsoft.Json.Linq;
+using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium;
 using RestSharp;
 using System;
 using TechTalk.SpecFlow;
+using OpenQA.Selenium.Chrome;
 
 namespace BDDTesting.Net7.StepDefinitions
 {
     [Binding]
     public class SeleniumUISteps
     {
-        private readonly ScenarioContext _scenarioContext;
-        private RestResponse _response;
+        private readonly IWebDriver _driver;
 
-        public SeleniumUISteps(ScenarioContext scenarioContext)
+        private readonly ScenarioContext _scenarioContext;
+        private readonly FeatureContext _featureContext;
+
+        public SeleniumUISteps(ScenarioContext scenarioContext, FeatureContext featureContext)
         {
             _scenarioContext = scenarioContext;
+            _featureContext = featureContext;
+            _driver = new ChromeDriver();
         }
 
-        [Given(@"I send a request to check the IP address ""(.*)""")]
-        public void GivenISendARequestToCheckTheIPAddress(string ipAddress)
+        [Given(@"I navigate to the C-Sharp Corner article page ""([^""]*)""")]
+        public void GivenINavigateToTheC_SharpCornerArticlePage(string url)
         {
-            var client = new RestClient($"https://ipapi.co/");
-            var request = new RestRequest($"{ipAddress}/json/");
-            _response = client.Execute(request);
+            _driver.Navigate().GoToUrl("https://www.c-sharpcorner.com/article/insight-database-write-less-code-in-data-access-layer-using-auto-interface-imp/");
         }
 
-        [Then(@"the response should indicate that the IP address is of type ""(.*)""")]
-        public void ThenTheResponseShouldIndicateThatTheIPAddressIsOfType(string expectedType)
+        [When(@"the page has successfully loaded")]
+        public void WhenThePageHasSuccessfullyLoaded()
         {
-            var content = _response.Content;
-            var json = JObject.Parse(content);
+            // Example check: Wait until the header is present
+            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
+            wait.Until(driver => driver.FindElement(By.TagName("h1")).Displayed);
+        }
 
-            var ip_type = json["ip"].ToString();
-            var actualType = ip_type.Contains(":") ? "IPv6" : "IPv4";
+        [Then(@"I should see the header ""(.*)""")]
+        public void ThenIShouldSeeTheHeader(string expectedHeader)
+        {
+            var header = _driver.FindElement(By.TagName("h1")).Text;
+            Assert.AreEqual(expectedHeader, header);
+        }
 
-            Assert.AreEqual(expectedType, actualType, "The IP address type does not match the expected type.");
+        [AfterScenario]
+        public void AfterScenario()
+        {
+            var tags = _scenarioContext.ScenarioInfo.Tags;
+
+            // Check if the scenario is tagged with 'UI'
+            if (tags.Contains("UI") && !string.IsNullOrEmpty(_driver.Url))
+            {
+                _driver.Quit();
+            }
         }
     }
 }

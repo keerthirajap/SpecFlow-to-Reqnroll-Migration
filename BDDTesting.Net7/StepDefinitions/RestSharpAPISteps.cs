@@ -1,6 +1,8 @@
+using Newtonsoft.Json.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
+using RestSharp;
 using System;
 using TechTalk.SpecFlow;
 
@@ -9,10 +11,10 @@ namespace BDDTesting.Net7.StepDefinitions
     [Binding]
     public class RestSharpAPISteps
     {
-        private readonly IWebDriver _driver;
-
         private readonly ScenarioContext _scenarioContext;
         private readonly FeatureContext _featureContext;
+
+        private RestResponse _response;
 
         public RestSharpAPISteps(ScenarioContext scenarioContext, FeatureContext featureContext)
         {
@@ -20,31 +22,24 @@ namespace BDDTesting.Net7.StepDefinitions
             _featureContext = featureContext;
         }
 
-        [Given(@"I navigate to the C-Sharp Corner article page ""([^""]*)""")]
-        public void GivenINavigateToTheC_SharpCornerArticlePage(string url)
+        [Given(@"I send a request to check the IP address ""(.*)""")]
+        public void GivenISendARequestToCheckTheIPAddress(string ipAddress)
         {
-            _driver.Navigate().GoToUrl("https://www.c-sharpcorner.com/article/insight-database-write-less-code-in-data-access-layer-using-auto-interface-imp/");
+            var client = new RestClient($"https://ipapi.co/");
+            var request = new RestRequest($"{ipAddress}/json/");
+            _response = client.Execute(request);
         }
 
-        [When(@"the page has successfully loaded")]
-        public void WhenThePageHasSuccessfullyLoaded()
+        [Then(@"the response should indicate that the IP address is of type ""(.*)""")]
+        public void ThenTheResponseShouldIndicateThatTheIPAddressIsOfType(string expectedType)
         {
-            // Example check: Wait until the header is present
-            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
-            wait.Until(driver => driver.FindElement(By.TagName("h1")).Displayed);
-        }
+            var content = _response.Content;
+            var json = JObject.Parse(content);
 
-        [Then(@"I should see the header ""(.*)""")]
-        public void ThenIShouldSeeTheHeader(string expectedHeader)
-        {
-            var header = _driver.FindElement(By.TagName("h1")).Text;
-            Assert.AreEqual(expectedHeader, header);
-        }
+            var ip_type = json["ip"].ToString();
+            var actualType = ip_type.Contains(":") ? "IPv6" : "IPv4";
 
-        [AfterScenario]
-        public void AfterScenario()
-        {
-            //_driver.Quit();
+            Assert.AreEqual(expectedType, actualType, "The IP address type does not match the expected type.");
         }
     }
 }

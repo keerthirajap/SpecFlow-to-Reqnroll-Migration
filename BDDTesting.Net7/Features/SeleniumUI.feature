@@ -1,5 +1,6 @@
 ﻿Feature: Verify Page Elements and Click Button
 
+@UI
 Scenario: UI TEsting -> Check C-Sharp Corner Article
 	Given I navigate to the C-Sharp Corner article page "https://www.c-sharpcorner.com/article/insight-database-write-less-code-in-data-access-layer-using-auto-interface-imp/"
 	When the page has successfully loaded

@@ -1,5 +1,6 @@
 ﻿Feature: IP Address Type Check
 
+@API
 Scenario Outline: Verify IP address type -> Examples
 	Given I send a request to check the IP address "<ip_address>"
 	Then the response should indicate that the IP address is of type "<expected_type>"

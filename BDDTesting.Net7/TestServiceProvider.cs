@@ -10,16 +10,16 @@
 
     public class TestServiceProvider
     {
-        public static IServiceProvider ServiceProvider { get; private set; }
+        //public static IServiceProvider ServiceProvider { get; private set; }
 
-        public static void ConfigureServices()
-        {
-            var serviceCollection = new ServiceCollection();
+        //public static void ConfigureServices()
+        //{
+        //    var serviceCollection = new ServiceCollection();
 
-            // Register your services here
-            serviceCollection.AddSingleton<ILoggerService, ConsoleLoggerService>();
+        //    // Register your services here
+        //    serviceCollection.AddSingleton<ILoggerService, ConsoleLoggerService>();
 
-            ServiceProvider = serviceCollection.BuildServiceProvider();
-        }
+        //    ServiceProvider = serviceCollection.BuildServiceProvider();
+        //}
     }
 }
