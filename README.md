@@ -73,9 +73,9 @@ The project includes several types of feature files to cover various scenarios:
 
    Run your tests to ensure that everything functions as expected and that the migration did not introduce any issues.
 
-## Project Renaming and Solution Setup
+## Project and Solution Setup
 
-The project has been renamed to **"BDDTesting.Net8"** to reflect the updated framework version. Both .NET 7 (SpecFlow) and .NET 8 (Reqnroll) projects are included in the same solution for easy reference and comparison, helping you understand the differences and benefits of the migration.
+The solutions has both  **"BDDTesting.Net7"** .NET 7 (SpecFlow) and **"BDDTesting.Net8"** .NET 8 (Reqnroll) projects are included in the same solution for easy reference and comparison, helping you understand the differences and benefits of the migration.
 
 ## Additional Notes
 
