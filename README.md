@@ -81,4 +81,3 @@ The project has been renamed to **"BDDTesting.Net8"** to reflect the updated fra
 
 - Duplicate rows in examples are not supported and may cause unexpected exceptions. Remove any duplicates to avoid this issue.
 - If you encounter issues, please post them in the comments section along with any solutions.
-- For more information, refer to the official [Reqnroll migration guide](#).
