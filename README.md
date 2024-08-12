@@ -1,7 +1,3 @@
-Here’s a rephrased version of your GitHub README file with markdown markup:
-
----
-
 # SpecFlow to Reqnroll Migration Guide
 
 If you're currently using SpecFlow for test automation, you might have noticed that it no longer supports .NET 8 or newer versions. But don't worry! You can quickly switch to **Reqnroll**, a tool that closely resembles SpecFlow, within just a few minutes or hours.
